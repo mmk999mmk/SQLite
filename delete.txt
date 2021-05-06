@@ -1,0 +1,7 @@
+1.DELETE FROM
+  player;
+-- we cannot retrive once we deleted them from the table.we can use the where clause.
+
+2.Truncate we cannot use where clause and removes all the rows. -- sqlite doesnt have it
+
+DROP TABLE table_name; -- deletes the table.

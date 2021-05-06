@@ -1,0 +1,19 @@
+SELECT
+  column1,
+  column2,
+..columnN
+FROM
+  table_name [WHERE condition]
+ORDER BY
+  column1 ASC / DESC,
+  cloumn2 ASC / DESC;
+---------------------------
+SELECT
+  DISTINCT brand
+FROM
+  product
+ORDER BY
+  brand;
+-------------------------------
+OFFSET clause should be placed after the LIMIT clause. Default OFFSET value is 0.
+

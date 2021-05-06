@@ -1,0 +1,14 @@
+ACID:
+
+Atomicity:
+Either all SQL statements or none are applied to the database.
+
+Consistency:
+Transactions always leave the database in a consistent state.
+
+Isolation:
+Multiple transaction can occur at the same time without adversely affecting the other
+
+Durability:
+Changes of a successful transaction persist even after a system crash.
+

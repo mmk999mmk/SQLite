@@ -1,0 +1,12 @@
+1-1
+1-m
+m-1
+m-m
+
+CREATE TABLE table2(
+  c1 t1 NOT NULL PRIMARY KEY,
+  c2 t2,
+  FOREIGN KEY(c2) REFERENCES table1(c3) ON DELETE CASCADE
+);
+
+To enable foreign key constraints in SQLite, use PRAGMA foreign_keys = ON; By default it is enabled in our platform!

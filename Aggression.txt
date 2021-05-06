@@ -1,0 +1,91 @@
+COUNT	Counts the number of values
+SUM	Adds all the values
+MIN	Returns the minimum value
+MAX	Returns the maximum value
+AVG	Calculates the average of the values
+
+SELECT
+  MAX(score),
+  MIN(score)
+FROM
+  player_match_details
+WHERE
+  year = 2011;
+
+SELECT COUNT(*)    
+ FROM player_match_details;
+
+SELECT
+  count(name),
+  count(score)
+FROM
+  player_match_details;
+
+count(name)	count(score)
+18	          14
+----------------------------
+having:
+---------------------------
+SELECT
+  name,
+  SUM(score) AS total_score
+FROM
+  player_match_details
+GROUP BY
+  name
+HAVING
+  total_score > 100;
+
+WHERE vs HAVING: 
+
+WHERE is used to filter rows and this operation is performed before grouping. 
+HAVING is used to filter groups and this operation is performed after grouping.
+
+Alias (as)
+
+---------------------------------
+to concatenate strings:
+
+SELECT
+  name || " - " || genre AS movie_genre
+FROM
+  movie;
+
+
+
+----------------------------------
+strftime:
+
+SELECT name, strftime('%Y', release_date)
+FROM
+    movie;
+
+%d	Day of the month	01 - 31	  28
+%H	Hour	                00 - 24	  08
+%m	Month	                01 - 12	  02
+%j	Day of the year	       001 - 365  59
+%M	Minute	                 00-59	  30
+----------------------------------
+case when then:
+
+SELECT id, name,
+  CASE
+    WHEN collection_in_cr - budget_in_cr <= 100 THEN collection_in_cr - budget_in_cr * 0.1
+    WHEN (collection_in_cr - budget_in_cr > 100
+    AND collection_in_cr - budget_in_cr < 500) THEN collection_in_cr - budget_in_cr * 0.15
+    ELSE collection_in_cr - budget_in_cr * 0.18
+  END AS tax_amount
+FROM
+  movie;
+
+----------------------------------
+set operations:
+
+Each SELECT statement must have the same number of columns
+The columns must have similar data types
+The columns in each SELECT statement must be in the same order
+
+Intersect
+minus
+union
+union all

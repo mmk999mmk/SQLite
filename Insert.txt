@@ -1,0 +1,7 @@
+inserting:
+
+INSERT INTO
+  player (name, age, score)
+VALUES
+  ("Manoj", 23, 23),
+  ("Manoj", 23, 23)

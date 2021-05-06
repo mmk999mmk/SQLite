@@ -1,0 +1,30 @@
+name	        VARCHAR(200)
+date_of_birth	DATE
+address	        TEXT
+
+
+CREATE TABLE student (
+  name varchar(200),
+  date_of_birth Date,
+  address Text
+);
+
+
+d-types:
+
+Integer	  INTEGER / INT
+Float	  FLOAT
+String	  VARCHAR
+Text	  TEXT
+Date	  DATE
+Time	  TIME
+Datetime  DATETIME
+Boolean	  BOOLEAN
+
+Boolean values are stored as integers 0 (FALSE) and 1 (TRUE).
+Date object is represented as: ‘YYYY-MM-DD’
+Datetime object is represented as: ‘YYYY-MM-DD HH:MM:SS’
+
+to see the table details:
+
+PRAGMA TABLE_INFO(table_name);

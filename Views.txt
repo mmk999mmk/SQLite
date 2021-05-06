@@ -1,0 +1,25 @@
+In general, views are read only.
+
+We cannot perform write operations like updating, deleting & inserting rows in the base tables through views.
+
+CREATE VIEW order_with_products AS
+SELECT
+  name,
+  age
+FROM
+  user;
+
+DROP VIEW view_name;
+
+
+sub queries:
+
+SELECT
+   name,
+   (
+       SELECT AVG(rating)
+       FROM product
+       WHERE category = "WATCH"
+   ) - rating AS rating_variance
+FROM product
+WHERE category = "WATCH";

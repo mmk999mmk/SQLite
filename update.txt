@@ -1,0 +1,11 @@
+1.UPDATE
+  player
+SET
+  score = 100;
+
+2.UPDATE
+  table_name
+SET
+  column1 = value1
+WHERE
+  column2 = value2;

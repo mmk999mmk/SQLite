@@ -1,0 +1,16 @@
+1.SELECT
+  name
+FROM
+  player;
+
+2.SELECT
+  *
+FROM
+  player;
+
+3.SELECT
+  *
+FROM
+  player
+WHERE
+  score < 50;

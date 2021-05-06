@@ -1,0 +1,83 @@
+=	Equal to
+<>	Not equal to
+<	Less than
+<=	Less than or equal to
+>	Greater than
+>=	Greater than or equal to
+
+SELECT
+  *
+FROM
+  product
+WHERE
+  category <> "Food";
+
+SELECT
+  *
+FROM
+  product
+WHERE
+  category <> "Food";
+----------------------------------------------------
+like and underscore uses:
+
+SELECT
+  *
+FROM
+  product
+WHERE
+  brand LIKE "_____"; (5 underscores for 5 letter word)
+
+SELECT
+  *
+FROM
+  product
+WHERE
+  name LIKE "%Smart%";
+
+-------------------------------------------------------
+Operator	Description
+AND	Used to fetch rows that satisfy two or more conditions.
+OR	Used to fetch rows that satisfy at least one of the given conditions.
+NOT	Used to negate a condition in theWHEREclause.
+
+SELECT
+  *
+FROM
+  product
+WHERE
+  category = "Clothing"
+  AND price <= 1000;
+
+SELECT
+  *
+FROM
+  product
+WHERE
+  NOT name LIKE "%Cake%";
+
+Order of precedence:
+
+NOT
+AND
+OR
+
+-----------------------------------------------------------------
+In and between:
+
+SELECT
+  *
+FROM
+  product
+WHERE
+  brand IN ( "Puma", "Levi's", "Mufti", "Lee", "Denim");
+
+SELECT
+  name,
+  price,
+  brand
+FROM
+  product
+WHERE
+  price BETWEEN 1000
+  AND 5000;
